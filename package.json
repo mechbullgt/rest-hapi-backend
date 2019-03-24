@@ -1,0 +1,24 @@
+{
+  "name": "rest-hapi-backend",
+  "version": "1.0.0",
+  "description": "APIs development using hapi",
+  "main": "index.js",
+  "dependencies": {
+    "hapi": "^18.1.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mechbullgt/rest-hapi-backend.git"
+  },
+  "author": "Maqbool Ansari",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mechbullgt/rest-hapi-backend/issues"
+  },
+  "homepage": "https://github.com/mechbullgt/rest-hapi-backend#readme"
+}
