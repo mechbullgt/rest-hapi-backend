@@ -1,1 +1,6 @@
 https://hapijs.com/
+
+npm: confidence
+Confidence lets you load up a JSON object and then query that object using a slash-separated path structure instead of the normal dot-separated JavaScript syntax.
+If this was all Confidence did, it would be useless. But when you retrieve a key from Confidence, you can specify a criteria object which is used to filter the data before returning it. 
+You’ll most often use the $filter helper to match against specific values, but you can also use the $range helper to match an integer value against various buckets (good for AB tests!).
