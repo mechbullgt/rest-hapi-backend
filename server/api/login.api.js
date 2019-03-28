@@ -10,7 +10,8 @@ const RestHapi = require('rest-hapi')
 const Config = require('../../config')
 const Token = require('../utilities/create-token')
 const errorHelper = require('../utilities/error-helper')
-const auditLog = require('../policies/audit-log.policy')
+
+// const auditLog = require('../policies/audit-log.policy')
 
 const AUTH_STRATEGIES = Config.get('/constants/AUTH_STRATEGIES')
 const EXPIRATION_PERIOD = Config.get('/constants/EXPIRATION_PERIOD')

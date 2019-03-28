@@ -61,8 +61,8 @@ const constants = {
     FOR_IP_AND_USER: 5
   },
   LOCKOUT_PERIOD: 30, // in units of minutes
-  API_TITLE: 'appy API',
-  WEB_TITLE: 'appy Admin'
+  API_TITLE: 'sparkzOnline API',
+  WEB_TITLE: 'sparkzOnline Admin'
 }
 
 // "config" stores Confidence configuration object
