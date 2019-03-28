@@ -45,15 +45,15 @@ const manifest = {
       {
         plugin: 'bell'
       },
-      {
-        plugin: './server/plugins/mailer.plugin'
-      },
+      // {
+      //   plugin: './server/plugins/mailer.plugin'
+      // },
       {
         plugin: './server/plugins/auth.plugin'
       },
-      {
-        plugin: './server/plugins/sockets.plugin'
-      },
+      // {
+      //   plugin: './server/plugins/sockets.plugin'
+      // },
       {
         plugin: './server/plugins/api.plugin'
       }

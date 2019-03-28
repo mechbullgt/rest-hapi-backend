@@ -1,33 +1,28 @@
-let Hapi = require('hapi')
-let mongoose = require('mongoose')
-let RestHapi = require('rest-hapi')
+'use strict'
+const Glue = require('glue')
+const RestHapi = require('rest-hapi')
+const Manifest = require('./config/manifest.conf')
 
-async function api(){
+const composeOptions = {
+  relativeTo: __dirname
+}
+
+const startServer = async function() {
   try {
-    let server = Hapi.Server({
-        port: 8080 
-    })
-    
-    let config = {
-        appTitle: "sparkzOnline",
-    };
-
-    await server.register({
-      plugin: RestHapi,
-      options: {
-        mongoose,
-        config
-      }
-    })
+    const manifest = Manifest.get('/')
+    const server = await Glue.compose(manifest, composeOptions)
 
     await server.start()
 
-    console.log("Server ready", server.info)
-    
-    return server
+    RestHapi.logUtil.logActionComplete(
+      RestHapi.logger,
+      'Server Initialized',
+      server.info
+    )
   } catch (err) {
-    console.log("Error starting server:", err);
+    console.error(err)
+    process.exit(1)
   }
 }
 
-module.exports = api()
+startServer()
